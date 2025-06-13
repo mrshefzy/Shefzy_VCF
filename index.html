@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Universal Styles & Pink Theme --- */
+        /* --- Universal Styles & Pink Theme (No changes here) --- */
         :root {
             --primary-pink: #FF69B4; /* Hot Pink */
             --secondary-pink: #FFB6C1; /* Light Pink */
@@ -18,169 +18,24 @@
             --border-color: #f2d9e0;
             --shadow-color: rgba(255, 105, 180, 0.2);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--background-pink);
-            color: var(--dark-text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* --- Main Container --- */
-        .container {
-            background-color: var(--light-text);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px var(--shadow-color);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-
-        header h1 {
-            color: var(--primary-pink);
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        header p {
-            color: #888;
-            margin-bottom: 30px;
-        }
-
-        /* --- Form Styles --- */
-        #contact-form .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        #contact-form label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark-text);
-        }
-
-        #contact-form input {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 1em;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        #contact-form input:focus {
-            outline: none;
-            border-color: var(--primary-pink);
-            box-shadow: 0 0 8px var(--shadow-color);
-        }
-
-        #submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink));
-            color: var(--light-text);
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.3s;
-        }
-
-        #submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px var(--shadow-color);
-        }
-
-        #success-message {
-            color: green;
-            margin-top: 15px;
-            font-weight: 600;
-            display: none;
-        }
-
-        /* --- Admin Section --- */
-        .admin-section {
-            /* --- CHANGE 1: Hide the admin section by default --- */
-            display: none; 
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px dashed var(--border-color);
-        }
-
-        .admin-section h2 {
-            color: var(--primary-pink);
-            margin-bottom: 20px;
-        }
-
-        #contact-list {
-            text-align: left;
-            background-color: var(--background-pink);
-            padding: 20px;
-            border-radius: 10px;
-            max-height: 200px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        #contact-list p {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--background-pink); color: var(--dark-text); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .container { background-color: var(--light-text); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow-color); max-width: 500px; width: 100%; text-align: center; }
+        header h1 { color: var(--primary-pink); font-size: 2.5em; margin-bottom: 10px; font-weight: 700; }
+        header p { color: #888; margin-bottom: 30px; }
+        #contact-form .form-group { margin-bottom: 20px; text-align: left; }
+        #contact-form label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--dark-text); }
+        #contact-form input { width: 100%; padding: 15px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 1em; font-family: 'Poppins', sans-serif; transition: border-color 0.3s, box-shadow 0.3s; }
+        #contact-form input:focus { outline: none; border-color: var(--primary-pink); box-shadow: 0 0 8px var(--shadow-color); }
+        #submit-btn { width: 100%; padding: 15px; background: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink)); color: var(--light-text); border: none; border-radius: 10px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.3s; }
+        #submit-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--shadow-color); }
         
-        #contact-list p:last-child {
-            border-bottom: none;
-        }
-
-        .admin-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .admin-btn {
-            flex: 1;
-            padding: 12px;
-            border: 2px solid var(--primary-pink);
-            border-radius: 10px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        #download-btn {
-            background-color: var(--primary-pink);
-            color: var(--light-text);
-        }
-
-        #download-btn:hover {
-            background-color: #db4a9b;
-        }
-        
-        #clear-btn {
-            background-color: transparent;
-            color: var(--primary-pink);
-        }
-
-        #clear-btn:hover {
-            background-color: var(--background-pink);
-        }
+        /* --- Admin Section (No style changes needed) --- */
+        .admin-section { display: none; margin-top: 40px; padding-top: 30px; border-top: 2px dashed var(--border-color); }
+        .admin-section h2 { color: var(--primary-pink); margin-bottom: 20px; }
+        .admin-section .admin-info { text-align: left; background-color: var(--background-pink); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); }
+        .admin-section .admin-info p { padding: 8px 0; }
+        .admin-section .admin-info a { color: var(--primary-pink); font-weight: 600; }
     </style>
 </head>
 <body>
@@ -192,29 +47,50 @@
         </header>
 
         <main>
-            <!-- User Input Form -->
-            <form id="contact-form">
+            <!-- 
+                CHANGE 1: The form is now sending data to Formspree.
+                - The 'action' attribute points to your unique Formspree form endpoint.
+                - You MUST replace YOUR_FORM_ID_HERE with the ID you got from formspree.io
+                - The 'method' is still "POST".
+            -->
+            <form id="contact-form" action="https://formspree.io/f/xrbkqnyq" method="POST"> 
+
+                <!-- 
+                    CHANGE 2: Removed the hidden inputs for Web3Forms.
+                    - Formspree doesn't need an 'access_key' input.
+                    - Redirection is handled differently (see below).
+                -->
+
+                <!-- These inputs use the 'name' attribute so Formspree knows what to call them -->
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="e.g., Jane Doe" required>
+                    <input type="text" id="name" name="Full Name" placeholder="e.g., Jane Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="e.g., +1 555-123-4567" required>
+                    <input type="tel" id="phone" name="Phone Number" placeholder="e.g., +1 555-123-4567" required>
                 </div>
+
+                <!-- 
+                    Optional: For a custom "Thank You" page, uncomment this and change the URL.
+                    Otherwise, Formspree will show its default success page.
+                    <input type="hidden" name="_next" value="https://yoursite.com/thanks.html"> 
+                -->
+
                 <button type="submit" id="submit-btn">Add My Contact</button>
-                <p id="success-message">Thank you! Your contact has been added.</p>
             </form>
 
-            <!-- Admin & Download Section -->
+            <!-- 
+                CHANGE 3: The Admin Panel is updated for Formspree.
+                It now tells the admin where to find the collected data on the Formspree platform.
+            -->
             <section class="admin-section">
                 <h2>Admin Panel</h2>
-                <div id="contact-list">
-                    <p>No contacts added yet.</p>
-                </div>
-                <div class="admin-buttons">
-                    <button id="download-btn" class="admin-btn">Download All Contacts (.vcf)</button>
-                    <button id="clear-btn" class="admin-btn">Clear All Contacts</button>
+                <div class="admin-info">
+                    <p>Contact submissions are no longer stored in the browser.</p>
+                    <p>All submitted contacts are sent to the email you registered with <strong>Formspree</strong>.</p>
+                    <p>You can also view all submissions in your <a href="https://formspree.io/forms" target="_blank">Formspree Dashboard</a>.</p>
+                    <p>From the dashboard, you can download all entries as a CSV or JSON file to create your VCF file.</p>
                 </div>
             </section>
         </main>
@@ -222,156 +98,21 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- CHANGE 2: NEW CODE - ADMIN ACCESS LOGIC ---
-            
-            // --- STEP 1: Define your secret key. Change this to something unique! ---
-            const SECRET_ADMIN_KEY = 'Shefzyisking01'; // <-- IMPORTANT: Change this password
-
-            // --- STEP 2: Check the URL for the secret key ---
+            // --- Admin access logic remains the same ---
+            const SECRET_ADMIN_KEY = 'Shefzyisking01'; // <-- You can still use this
             const urlParams = new URLSearchParams(window.location.search);
             const providedKey = urlParams.get('admin_key');
 
-            // --- STEP 3: If the key matches, show the admin section ---
             if (providedKey === SECRET_ADMIN_KEY) {
                 const adminSection = document.querySelector('.admin-section');
                 if (adminSection) {
                     adminSection.style.display = 'block';
                 }
             }
-            // --- END OF NEW ADMIN CODE ---
 
-
-            const contactForm = document.getElementById('contact-form');
-            const nameInput = document.getElementById('name');
-            const phoneInput = document.getElementById('phone');
-            const successMessage = document.getElementById('success-message');
-            
-            const contactListDiv = document.getElementById('contact-list');
-            const downloadBtn = document.getElementById('download-btn');
-            const clearBtn = document.getElementById('clear-btn');
-            
-            const STORAGE_KEY = 'vcfContacts';
-
-            // --- FUNCTIONS ---
-
-            // Function to get contacts from localStorage
-            const getContacts = () => {
-                const contacts = localStorage.getItem(STORAGE_KEY);
-                return contacts ? JSON.parse(contacts) : [];
-            };
-
-            // Function to save contacts to localStorage
-            const saveContacts = (contacts) => {
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(contacts));
-            };
-
-            // Function to display contacts in the Admin Panel
-            const displayContacts = () => {
-                const contacts = getContacts();
-                contactListDiv.innerHTML = ''; // Clear the list first
-
-                if (contacts.length === 0) {
-                    contactListDiv.innerHTML = '<p>No contacts added yet.</p>';
-                } else {
-                    contacts.forEach(contact => {
-                        const contactElement = document.createElement('p');
-                        contactElement.innerHTML = `<strong>${contact.name}</strong>: ${contact.phone}`;
-                        contactListDiv.appendChild(contactElement);
-                    });
-                }
-            };
-
-            // Function to handle form submission
-            const handleFormSubmit = (event) => {
-                event.preventDefault(); // Prevent page reload
-
-                const name = nameInput.value.trim();
-                const phone = phoneInput.value.trim();
-
-                if (name && phone) {
-                    const newContact = { name, phone };
-                    const contacts = getContacts();
-                    contacts.push(newContact);
-                    saveContacts(contacts);
-                    
-                    // Clear form and show success message
-                    contactForm.reset();
-                    successMessage.style.display = 'block';
-                    setTimeout(() => {
-                        successMessage.style.display = 'none';
-                    }, 3000);
-
-                    // Update the list only if the admin panel is visible
-                    if (document.querySelector('.admin-section').style.display === 'block') {
-                        displayContacts();
-                    }
-                }
-            };
-
-            // Function to generate the VCF file content
-            const generateVCFContent = () => {
-                const contacts = getContacts();
-                if (contacts.length === 0) {
-                    alert('There are no contacts to download.');
-                    return null;
-                }
-
-                let vcfContent = '';
-                contacts.forEach(contact => {
-                    vcfContent += 'BEGIN:VCARD\n';
-                    vcfContent += 'VERSION:3.0\n';
-                    vcfContent += `FN:${contact.name}\n`; // Full Name
-                    vcfContent += `N:${contact.name};;;\n`; // Structured Name
-                    vcfContent += `TEL;TYPE=CELL:${contact.phone}\n`; // Phone number
-                    vcfContent += 'END:VCARD\n\n'; // Add a blank line between cards
-                });
-
-                return vcfContent;
-            };
-
-            // Function to trigger the download
-            const downloadVCFFile = () => {
-                const vcfContent = generateVCFContent();
-                if (!vcfContent) return;
-
-                const blob = new Blob([vcfContent], { type: 'text/vcard;charset=utf-8' });
-                const url = URL.createObjectURL(blob);
-                
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                a.download = 'contacts.vcf'; // The name of the downloaded file
-                
-                document.body.appendChild(a);
-                a.click();
-                
-                // Clean up
-                window.URL.revokeObjectURL(url);
-                document.body.removeChild(a);
-            };
-            
-            // Function to clear all data
-            const clearAllContacts = () => {
-                if (confirm('Are you sure you want to delete ALL saved contacts? This cannot be undone.')) {
-                    localStorage.removeItem(STORAGE_KEY);
-                    displayContacts(); // Refresh the list to show it's empty
-                    alert('All contacts have been cleared.');
-                }
-            };
-
-            // --- EVENT LISTENERS ---
-            contactForm.addEventListener('submit', handleFormSubmit);
-            // Only add listeners to admin buttons if they exist (i.e., if admin is logged in)
-            if (downloadBtn && clearBtn) {
-                downloadBtn.addEventListener('click', downloadVCFFile);
-                clearBtn.addEventListener('click', clearAllContacts);
-            }
-
-            // --- INITIAL LOAD ---
-            // Only display contacts if the admin panel is visible
-            if (document.querySelector('.admin-section').style.display === 'block') {
-                displayContacts();
-            }
+            // --- CHANGE 4: The JavaScript is now even simpler. ---
+            // The form submits directly to the Formspree server. No custom JS is needed for submission.
+            // All data handling, storage, and email notifications are managed by Formspree.
         });
     </script>
 </body>
